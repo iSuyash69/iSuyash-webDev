@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near Checks ✅</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=GFS+Didot&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 64px;
+            margin-top: 32px;
+            font-family: 'Carrois Gothic SC', sans-serif;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 32px;
+            margin-left: 10px;
+            font-family: 'Lobster', cursive;
+        }
+
+        .hostel-photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .photo-card {
+            margin: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .review-card {
+            border: 1px solid black;
+            border-radius: 19px;
+            padding: 16px;
+            margin: 16px;
+            width: 30%;
+            min-width: 300px;
+        }
+
+        .reviewer {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .review-text {
+            margin-top: 16px;
+        }
+
+        .searchbar {
+            display: flex;
+            justify-content: center;
+            margin-top: 32px;
+        }
+
+        .search-input {
+            padding: 8px;
+            font-size: 19px;
+            width: 300px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        body {
+            background-color: #e3f2e4;
+        }
+
+        .submit-btn {
+            padding: 8px 16px;
+            font-size: 19px;
+            border-radius: 8px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        #pic1,
+        #pic2,
+        #pic3 {
+            width: 500px;
+        }
+
+        .login {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 32px;
+        }
+
+        .login-btn {
+            padding: 8px 16px;
+            font-size: 19px;
+            border-radius: 8px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            margin-right: 30px;
+        }
+
+        .signup-btn {
+            padding: 8px 16px;
+            font-size: 19px;
+            border-radius: 8px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #login-btn-link,
+        #signup-btn-link {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <button class="login-btn">
+            <a href="#" id="login-btn-link"> Login</a>
+        </button>
+        <button class="signup-btn">
+            <a href="#" id="signup-btn-link">Sign Up</a>
+        </button>
+    </div>
+    <h1>Near Checks <span style="color: green">✅</span></h1>
+
+    <div class="searchbar">
+        <input type="text" class="search-input" placeholder="Search College,Company...." />
+        <button class="submit-btn">Search</button>
+    </div>
+    <h2>Photos of our Hostels</h2>
+    <div class="hostel-photos">
+        <div class="photo-card">
+            <img src="134.jpg" alt="Hostel Photo 1" id="pic1" />
+        </div>
+        <div class="photo-card">
+            <img src="1758.jpg" alt="Hostel Photo 2" id="pic2" />
+        </div>
+        <div class="photo-card">
+            <img src="1836.jpg" alt="Hostel Photo 3" id="pic3" />
+        </div>
+    </div>
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+        <div class="review-card">
+            <div class="reviewer">Mohan</div>
+            <div class="review-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde,
+                laudantium eum! Aut molestiae rerum harum, omnis soluta distinctio
+                unde ex labore ullam sed non reiciendis quasi repellendus voluptatibus
+                aspernatur magni ipsam doloremque quo repudiandae saepe.
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="reviewer">Jatin</div>
+            <div class="review-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe,
+                ipsum dignissimos minima distinctio molestiae maxime, ratione ex quasi
+                ut non assumenda ipsam sed possimus incidunt similique sit odio
+                provident quisquam dolorum nemo voluptatem quas veniam? Deleniti
+                beatae non atque!
+            </div>
+        </div>
+        <div class="review-card">
+            <div class="reviewer">Suyash</div>
+            <div class="review-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos aliquam
+                ipsa enim aspernatur eius, repellat qui at non pariatur, repudiandae
+                ratione sunt consequuntur, voluptatibus error minima! Atque fugit
+                dolores, sapiente aut quae doloremque facere porro reprehenderit optio
+                fugiat sequi necessitatibus eos magnam nisi. Et, quisquam?
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
