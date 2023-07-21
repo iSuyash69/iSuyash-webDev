@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: #e3f9ff;
+            align-items: center;
+        }
+        .main-container{
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            background-color: #3a4452;
+            border-radius: 12px;
+            /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            /* box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2); */
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+        input{
+            text-align: right;
+            padding: 15px;
+            font-size: 55px;
+            max-width: 292px;
+            padding-bottom: 25px;
+            padding-right: 0px;
+            outline: none;
+            border: none;
+            background: none;
+            color: white;
+            font-weight: 700;
+        }
+        .keys{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+        button{
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 7px;
+            border-style: none;
+            font-weight: 700;
+            background: none;
+            color:  white;
+            cursor: pointer;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        button:hover{
+            background-color: #59666f;
+            color:yellow;
+        }
+        #main-button{
+            color:  #87ceeb;
+        }
+        #isEqualTo{
+            width: 144px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="display">
+            <input type="text" name="display">
+        </div>
+        <div class="keys">
+            <span class="row 1">
+                <button id="main-button">AC</button>
+                <button id="main-button">DE</button>
+                <button id="main-button">.</button>
+                <button id="main-button">/</button>
+            </span>
+            <span class="row 2">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button id="main-button">*</button>
+            </span>
+            <span class="row 3">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button id="main-button">-</button>
+            </span>
+            <span class="row 4">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button id="main-button">+</button>
+            </span>
+            <span class="row 5">
+                <button>00</button>
+                <button>0</button>
+                <button id="isEqualTo">=</button>
+            </span>
+        </div>
+    </div>
+    <footer>
+        <script>
+
+        </script>
+    </footer>
+</body>
+</html>
