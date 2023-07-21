@@ -120,7 +120,93 @@
     </div>
     <footer>
         <script>
-            let buttons=document.querySelectorAll("button").length;
+        
+        function keyboardClick(){
+            document.addEventListener("keydown",function(event){
+                let displaycurrentButton=document.querySelector("input").innerHTML;
+                let finalDisplayValue=document.querySelector("input").value;
+                switch(event.key){
+                    case '1':    
+                        displaycurrentButton='1';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '2':    
+                        displaycurrentButton='2';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '3':    
+                        displaycurrentButton='3';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '4':    
+                        displaycurrentButton='4';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '5':    
+                        displaycurrentButton='5';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '6':    
+                        displaycurrentButton='6';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '7':    
+                        displaycurrentButton='7';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '8':    
+                        displaycurrentButton='8';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '9':    
+                        displaycurrentButton='9';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '0':    
+                        displaycurrentButton='0';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '-':    
+                        displaycurrentButton='-';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '+':    
+                        displaycurrentButton='+';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '*':    
+                        displaycurrentButton='*';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '/':    
+                        displaycurrentButton='/';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case '.':    
+                        displaycurrentButton='.';
+                        document.querySelector("input").value+=displaycurrentButton;
+                        break;
+                    case 'Escape':    
+                        document.querySelector("input").value='';
+                        break;
+                    case 'Backspace':    
+                        document.querySelector("input").value=finalDisplayValue.toString().slice(0,-1);
+                        break;
+                    case 'Enter':
+                        if(document.querySelector("input").value===''){
+                            alert("no input given");
+                        }
+                        else{
+                            document.querySelector("input").value=eval(finalDisplayValue);  
+                        }
+                        break;
+                    }
+                });
+            }
+
+
+        function mouseClick(){   
+            let buttons=document.querySelectorAll("button").length; 
             for(let i=0;i<=buttons;i++){
                 document.querySelectorAll("button")[i].addEventListener("click",function(event){
                     let currentButton=document.querySelectorAll("button")[i].innerHTML;
@@ -141,6 +227,11 @@
                     }
                 });
             }
+        }
+
+        keyboardClick();
+        mouseClick();
+        
         </script>
     </footer>
 </body>
