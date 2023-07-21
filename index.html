@@ -120,7 +120,27 @@
     </div>
     <footer>
         <script>
-
+            let buttons=document.querySelectorAll("button").length;
+            for(let i=0;i<=buttons;i++){
+                document.querySelectorAll("button")[i].addEventListener("click",function(event){
+                    let currentButton=document.querySelectorAll("button")[i].innerHTML;
+                    let displaycurrentButton=document.querySelector("input").innerHTML;
+                    let finalDisplayValue=document.querySelector("input").value;
+                    if(event.target.innerHTML=='='){
+                        document.querySelector("input").value=eval(finalDisplayValue);  
+                    }
+                    else if(event.target.innerHTML=='AC'){
+                        document.querySelector("input").value='';
+                    }
+                    else if(event.target.innerHTML=='DE'){
+                        document.querySelector("input").value=finalDisplayValue.toString().slice(0,-1);
+                    }
+                    else{
+                    displaycurrentButton=currentButton;
+                    document.querySelector("input").value+=displaycurrentButton;
+                    }
+                });
+            }
         </script>
     </footer>
 </body>
