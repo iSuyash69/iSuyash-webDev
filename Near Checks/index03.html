@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near Checks</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e3f2e4;
+        }
+
+        #navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+        }
+
+        #navbar .logo {
+            display: inline-block;
+        }
+
+        #navbar .logo img {
+            /* height: 20px; */
+            vertical-align: middle;
+                left: -422px;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #navbar ul li {
+            margin-right: 10px;
+            position: relative;
+            right: 320px;
+
+        }
+
+        #navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        #navbar .user img {
+            width: 57px;
+            border-radius: 50%;
+        }
+
+        .mapcontainer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        #map {
+            align-self: flex-end;
+            position: absolute;
+            bottom: 10px;
+            border: 2px solid black;
+        }
+
+        #green {
+            width: 50px;
+            position: relative;
+            right: 445px;
+        }
+
+        #searchbar {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        #searchbar input[type="text"] {
+            padding: 8px;
+            font-size: 19px;
+            width: 300px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        #searchbar button {
+            padding: 8px 16px;
+            font-size: 19px;
+            border-radius: 8px;
+            border: none;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+        .content{
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 92px;
+        }
+        .box1, .box2, .box3, .box4{
+            height: 200px;
+            width: 920px;
+            border: 2px solid black;
+            margin: 12px;
+            position: relative;
+            left: 106px;
+        }
+        .img1, .img2, .img3{
+            width: 200px;
+            height: 200px;
+        }
+        .hostelno1{
+            position: absolute;
+            top: -32px;
+            right: 530px;
+            font-size: 27px;
+        }
+        .des1{
+            width: 585px;
+            height: 200px;
+            position: relative;
+            bottom: 161px;
+            left: 234px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <h1>Near Checks</h1>
+        <div class="logo">
+            <img src="media/fotor_2023-5-16_0_44_49.png" alt="Green Tick" id="green">
+        </div>
+        <ul>
+            <li><a href="index05">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="user">
+            <img src="media/fotor_2023-4-27_21_19_7_prev_ui.png" alt="User Image" id="userimg">
+        </div>
+    </div>
+
+    <div id="searchbar">
+        <input type="text" placeholder="Search.....">
+        <button type="submit">Search</button>
+    </div>
+
+    <div class="mapcontainer">
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.8916391933626!2d73.82104903811663!3d20.01306213129991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebab15555555%3A0xdb01367e9d5cf969!2sK.%20K.%20Wagh%20Institute%20Of%20Engineering%20Education%20And%20Research!5e0!3m2!1sen!2sin!4v1684173865210!5m2!1sen!2sin"
+                width="800" height="660" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="box1">
+            <div class="img1">
+                <img src="media/fotor_2023-5-16_0_39_15.jpg" alt="Hostel1">
+            </div>
+            <div class="hostelno1">
+                <h2 id="Hostel1ID">Hostel 1</h2>
+            </div>
+            <div class="des1">
+                <p id="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, rerum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae excepturi ratione nihil! Veritatis vel rem cupiditate magnam libero! Veniam, error architecto excepturi reiciendis numquam aut at autem iste eligendi quisquam.
+                </p>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="img2">
+                <img src="media/fotor_2023-5-16_0_39_15.jpg" alt="Hostel2">
+            </div>
+        </div>
+        <div class="box3">
+            <div class="img3">
+                <img src="media/fotor_2023-5-16_0_39_15.jpg" alt="Hostel3">
+            </div>
+        </div>
+
+
+
+
+
+</body>
+
+</html>

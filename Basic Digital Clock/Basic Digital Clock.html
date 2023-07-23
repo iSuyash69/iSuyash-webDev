@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background:linear-gradient(45deg,#08001f,#30197d);
+            color: #ffff;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: rgba(235, 0, 255, 0.11); */
+            /* background-color: rgba(255, 255, 255, 0.5); */
+            /* backdrop-filter: blur(5px); */
+            /* background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)); */
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            /* background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)); */
+            min-width: 650px;
+            margin-top: 25vh;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            /* box-shadow:0 4px 8px rgba(0, 0, 0, 0.1),  0 8px 16px rgba(0, 0, 0, 0.2),  0 16px 32px rgba(0, 0, 0, 0.3); */
+        }
+        .flex-container:hover{
+            width: 680px;
+            height: 263px;
+        }
+        .flex-container h1{
+            padding: 10px;
+            font-size: 4.5rem;
+            padding-bottom: 0px;
+        }
+        .flex-container h1 span{
+            padding: 10px;
+        }
+        .info{
+            font-size: 12px;
+            display: flex;
+            position: relative;
+            padding-bottom: 25px;
+            font-weight: 700;
+        }
+        .info span{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <h1>
+            <span class="hrs">00</span>
+            <span>:</span>
+            <span class="mins">00</span>
+            <span>:</span>
+            <span class="sec">00</span>
+        </h1>
+        <div class=info>
+            <span style="right: 164px;">HOURS</span>
+            <span style="left: -18px;">MINS</span>
+            <span style="left: 160px;">SEC</span>
+        </div>
+    </div>
+    <footer>
+        <script>
+            function clock(){
+                let hrs=document.querySelector(".hrs");
+                let mins=document.querySelector(".mins");
+                let sec=document.querySelector(".sec");
+
+                let currentTime=new Date();          //javascript inbuilt function to get current day and date 
+
+                if(currentTime.getHours()<10){       //if its less than 10 , it shows the number with only single digit , eg. 01 is written as 1 , so to make it look good and proffesional 0 is contacanated so number becomes 01  
+                    hrs.innerHTML='0'+currentTime.getHours();         
+                }
+                else{
+                    hrs.innerHTML=currentTime.getHours();   
+                }
+
+
+                if(currentTime.getMinutes()<10){       
+                    mins.innerHTML='0'+currentTime.getMinutes();    
+                }
+                else{
+                    mins.innerHTML=currentTime.getMinutes();   
+                }
+ 
+
+                if(currentTime.getSeconds()<10){
+                    sec.innerHTML='0'+currentTime.getSeconds(); 
+                }
+                else{
+                    sec.innerHTML=currentTime.getSeconds();
+                }
+            }
+            setInterval(clock,1000);   
+
+        </script>
+    </footer>
+</body>
+</html>
