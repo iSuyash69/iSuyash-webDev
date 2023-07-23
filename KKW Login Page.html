@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKW Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .main-container{
+            display: flex;
+            max-width: 100%;
+            min-width: 430px;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub-container{
+            border: 1px solid  #d4cece;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-radius: 3px;
+            border-top-style: none;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            background-color: #7DF9FF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;  
+
+        }
+        .logo img{
+            width: 120px;
+            padding-top: 17px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+        }
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding:30px;
+            padding-left: 65px;
+            padding-right: 65px;
+            padding-bottom: 25px;
+            
+        }
+        .title h1{
+            font-size: 18px;
+            font-weight: 400;
+            color: #0818A8;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            gap: 1.7rem;
+            align-items: center;
+        }
+        .input input{
+            width: 315px;
+            height: 37px;
+            border-radius: 7px;
+            border: 1px solid lightgray;
+            color: black;
+            padding-left: 10px;
+            outline-color: #0077c0;
+            outline-width: 1px;
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+        .input input::placeholder{
+            letter-spacing: normal;
+            color: lightgray;
+            font-weight: 100;
+        }
+        .btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 42px;
+            position: relative;
+        }
+        .btn button{
+            padding: 135px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            border: none;
+            font-weight: 600;
+            color: white;
+            border-radius: 5px;
+            background-color: #03ad17;
+            cursor: pointer;
+            transition: all 0.3s;
+
+        }
+        .btn button:hover{
+            background-color:#0ABF1D;
+        }
+        .footer{
+            display: flex;
+            justify-content: center;
+            padding-top: 55px;
+            padding-bottom: 45px;
+        }
+        .footer p{
+            color: #0077c0;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0,3s;
+        }
+        .footer p:hover{
+            color:#0818A8;
+        }
+        .error{
+            position: absolute;
+            font-size: 15px;
+            bottom: -35px;
+            color: #FF0000;
+        }
+        .shake {
+            animation: shake 0.6s ease-in-out;
+        }
+        @keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 80% {
+    transform: translateX(5px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-2.5px);
+  }
+  40%, 60% {
+    transform: translateX(2.5px);
+  }
+}     
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="logo">
+                <img src="https://pharmacy.kkwagh.edu.in/assets/front_end/images/logo.png" alt="kkw logo">
+            </div>
+            <div class="content">
+                <div class="title">
+                    <h1>KKWAGH EDUCATION SOCIETY </h1>
+                    <span><h1>NASHIK</h1></span>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="btn">
+                    <button>Sign in</button>
+                </div>
+                <div class="footer">
+                    <p>Access the User Portal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    function nextFocus(){
+        document.addEventListener("keydown",function(event){
+
+            if(event.key==='Enter'){
+                let inputBox=document.querySelectorAll("input")[0];
+                inputBox.focus();
+            }
+
+            let inputBox=document.querySelectorAll("input")[0];
+            if(inputBox.value!=''){
+                if(event.key==='Enter'){
+                    let nextBox=document.querySelectorAll("input")[1];
+                    nextBox.focus();
+                }
+            }
+            
+            let nextBox=document.querySelectorAll("input")[1];
+            if(nextBox.value!=''){
+                if(event.key==='Enter'){
+                    btn=document.querySelector("button");
+                    btn.focus();
+                    alert("Bro");
+                }
+            }
+        });
+    }
+
+    function error(){
+
+        let btn=document.querySelector(".btn");
+        let error=document.createElement("div");
+
+        document.querySelector(".btn button").addEventListener("click",function(){
+
+            let textInput=document.querySelectorAll("input")[0].value;
+            let passwordInput=document.querySelectorAll("input")[1].value;
+
+            if(textInput==''){
+                error.innerHTML="Please Enter your Username";
+                btn.appendChild(error);
+                document.querySelector(".btn div").classList.add("error");
+                document.querySelector(".sub-container").classList.add("shake");
+                setTimeout(function(){
+                    document.querySelector(".sub-container").classList.remove("shake");
+                },500);
+            }
+            else if(passwordInput==''){
+                error.innerHTML="Please Enter your Password";
+                btn.appendChild(error);
+                document.querySelector(".btn div").classList.add("error");
+                document.querySelector(".sub-container").classList.add("shake");
+                setTimeout(function(){
+                    document.querySelector(".sub-container").classList.remove("shake");
+                }, 500);
+            }
+            else{
+                error.innerHTML='';
+                btn.appendChild(error);
+                document.querySelector(".btn div").classList.remove("error");
+            }
+        });
+    }
+    nextFocus();
+    error();
+
+    </script>
+</body>
+</html>
