@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items:flex-start;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/009/096/272/original/abstract-colorful-background-with-place-for-text-blurred-gradient-backdrop-illustration-for-your-graphic-design-template-banner-poster-or-website-space-free-vector.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    /* height: 50vh; */
+    width:540px ;
+    margin-top:15vh;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.1),  0 8px 16px rgba(0, 0, 0, 0.2),  0 16px 32px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    padding-bottom: 40px;
+}
+.title{
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    padding: 20px;
+}
+.flex-container h1{
+    text-align: center;
+    padding: 10px;
+}
+.title img{
+    width: 60px;;
+}
+.flex-item1{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 25px;
+}
+.flex-item1 input{
+    width: 22rem;
+    padding: 12px;
+    padding-left: 15px;
+    border: none;
+    background-color:  #EDEDED;
+    outline: none;
+    border-radius: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; 
+    font-size: 15px; 
+}
+.flex-item1 button{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    color: white;
+    font-weight: 700;
+    background-color: #007BFF;
+    border-radius: 40px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.flex-item1 button:hover{
+    color: black;
+}
+.list-container li{
+    position: relative;
+    list-style: none;
+    font-size: 16px;
+
+    padding: 10px;
+    padding-left: 70px;
+    cursor: pointer;
+}
+.list-container li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border:1.5px solid;
+    left: 35px;
+    background-size: cover;
+    background-position: center;
+} 
+.list-container li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.list-container li.checked::before{
+    background-image: url(https://w7.pngwing.com/pngs/944/793/png-transparent-computer-icons-check-mark-presentation-symbol-check-list-miscellaneous-angle-text-thumbnail.png);
+}
+.removeIcon{
+    position: absolute;
+    right: 20px;
+    width: 40px;
+    top: 5px;
+    height: 40px;
+    font-size: 27px;
+    text-align: center;
+    color: #555;
+    line-height: 40px;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.removeIcon:hover{
+    background-color: #edeef0;
+}
+.editIcon{
+    position: absolute;
+    right: 55px;
+    width: 40px;
+    top: 5px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    color: #555;
+    line-height: 40px;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+.editIcon:hover{
+    background-color: #edeef0;
+}
+.brand{
+    position: absolute;
+    color: #FFFFFF;
+    bottom:30px;
+    right:35px
+}
+.h3{
+    font-size: 20px;
+}
+.a{
+    color: black;
+    text-decoration: none;
+}
