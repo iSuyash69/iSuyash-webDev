@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.main_container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?w=900&t=st=1690992266~exp=1690992866~hmac=795f85b7b2759c0dd7b55d34e003a60566e01485a28304b8992132e64c6a0ce4');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sub_container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2.4vh 2.4vw;
+    border-radius: 9px;
+    align-items: flex-start;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+    backdrop-filter: blur(5px);
+}
+.sub_container h2{
+    font-size: 16px;
+    margin-top: 0.6vh;
+}
+.sub_container input{
+    width: 350px;
+    height: 6vh;
+    border-radius: 6px;
+    border: solid 1px lightgray;
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+    padding-left: .7vw;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+
+}
+.sub_container img{
+    width: 200px;
+    align-self: center;
+    margin-bottom: 2.5vh;
+    display: none;
+    overflow: hidden;
+    border-radius: 7px;
+    border:solid 1px lightgray
+}
+.sub_container button{
+    padding: 1.8vh 110px;
+    background-color: #0ba6ff;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 3.5vh;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.sub_container button:hover{
+    background-color:#007ACC;
+}
+.sub_container button a{
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width:480px) {
+    .sub_container{
+        padding: 2.4vh 4.2vw;
+    }
+    .sub_container h2{
+        font-size: 15px;
+    }
+    .sub_container input{
+        width: 300px;
+    }
+    .sub_container button{
+        padding: 1.8vh 83px;
+        margin-bottom: 2vh;
+    }
+}
