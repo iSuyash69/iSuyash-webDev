@@ -51,7 +51,7 @@ function weather(data){
             document.querySelector(".content img").setAttribute("src",'images/snow.png');                
             break;
         case 'Clear':
-            document.querySelector(".content img").setAttribute("src",'C:images/clear.png');
+            document.querySelector(".content img").setAttribute("src",'images/clear.png');
             break;
         case 'Rain':
             document.querySelector(".content img").setAttribute("src",'images/rain.png');
