@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: url('C:/Users/ACER/Downloads/iSuyash-webDev-main/iSuyash-webDev-main/X-O Game/images/peakpx.jpg');
+    /* background: url('https://png.pngtree.com/background/20230527/original/pngtree-an-abstract-animation-of-an-electronic-tunnel-with-neon-light-lines-picture-image_2760620.jpg'); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.main_container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.sub_container{
+    display: flex;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 10px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.sub_container:hover{
+    background: rgba(255, 255, 255, 0.38); 
+}
+.sub_container p{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+.sub_container2{
+    display: flex;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+}
+.interface{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+}
+.row button{
+    background: transparent;
+    /* background: rgba(0, 255, 0, 0.5); */
+    font-size: 35px;
+    width: 100px;
+    height: 100px;
+    border:solid 2.5px lightgrey;
+    border-top:none;
+    border-left: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.row button:hover{
+    background: rgba(255, 255, 255, 0.38)
+}
+.row3 button{
+    border-bottom: none;   
+}
+
+
+
