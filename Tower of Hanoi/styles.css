@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image: url('assests/pxfuel (1).jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    min-height:100vh;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10vh;
+}
+header div h1{
+    font-size:45px;
+    color: #f0ead6;
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+    padding-top: 1vh;
+}
+
+.btn{
+    position: absolute;
+    top:3vh;
+    right: 2vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.btn button{
+    padding: 1.2vh 1.5vw;
+    border: solid 2px black;
+}
+#restart{
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color:#f0ead6;
+    transition: all 0.3s ease;
+    color:black;
+    cursor: pointer;
+}
+#restart:hover{
+    background-color:  #d0c0a0;
+}
+#howto{
+    padding: 0;
+    border-radius: 999px;
+    width: 50px;
+    height: 50px;
+    background-color:#f0ead6;
+    transition: all 0.3s ease;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+}
+#howto:hover{
+    background-color: #d0c0a0;
+}
+.popup{
+    display: flex;
+    flex-direction: column;
+    top: 8vh;
+    right: 0.5vw;
+    position: absolute;
+    /* text-align: center; */
+    width: 300px;
+    /* padding:5px 20px; */
+    padding: 10px 15px;
+    background-color:#d0c0a0;
+    border-radius: 9px;
+    border:solid 2px;
+    z-index: 2;
+    display:none
+}
+.popup i{
+    text-align:right;
+    cursor: pointer;
+}
+.popup h3{
+    padding-bottom:5px;
+    /* text-align: center; */
+}
+.popup p{
+    padding-bottom: 3px;
+    font-weight: 400;
+}
+.disks{
+    position: absolute;
+    display: flex;
+    gap: 15px;
+    top:3.7vh;
+    left: 2vw;
+}
+.disks h3{
+    color:wheat;
+    font-size: 21px;
+}
+#no_of_disks{
+    padding: 5px 13px;
+    font-size:15px;
+    background-color: #f0ead6;
+    border: solid 2px #d0c0a0;
+    outline: #d0c0a0;
+}
+.main_container{
+    display: flex;
+    height:70vh;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.tower{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    padding-bottom: 5px;
+    background-color:wheat;
+    width: 1rem;
+    height: 60vh;
+    box-shadow: 1px -1px 5px 2px black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.block{
+    cursor: move;
+    height: 2.5em;
+    margin-bottom: 5px;
+    border:solid 2px;
+}
+.red{
+    background-color: #B22222;
+    width: 4em;
+    border-radius: 10px;
+}
+.blue{
+    background-color: navy;
+    width: 6em;
+    border-radius: 10px;
+}
+.green{
+    background-color: #006400;
+    width: 8em;
+    border-radius: 10px;
+}
+.yellow{
+    background-color:#DAA520;
+    width: 10em;
+    border-radius: 10px;
+    display: none;
+}
+.pink{
+    background-color: pink;
+    width: 12.2rem;
+    border-radius: 10px;
+    display: none;
+}
+footer{
+    width: 100%;
+    display: flex;
+}
+footer h2{
+    padding-top: 1.5vh;
+    margin: auto;
+    color:#f0ead6;
+    text-shadow: 5px 5px 5px black;
+}
+
+@media (max-width:468px) {
+    header div h1{
+        font-size: 28px;
+    }
+    #howto{
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    #restart{
+        font-size: 13px;
+    }
+    .btn{
+        flex-direction: column-reverse;
+        top: 3vh;
+        gap: 10px;  
+    }
+    .popup{
+        top: 11vh;
+    }
+    .disks{
+        display: none;
+    }
+    .main_container{
+        width: 70%;
+        justify-content:space-between;
+    }
+    .tower{
+        width: 0.6rem;
+    }
+    .block{
+        height: 2rem;
+    }
+    .yellow{
+        width: 7rem;
+    }
+    .green{
+        width: 5rem;
+    }
+    .blue{
+        width: 3.2rem;
+    }
+    .red{
+        width: 2rem;
+    }
+    footer h2{
+        font-size: 23px;
+    }
+}
+.custom-popup {
+    background-color: #f5deb3 !important;
+}
+.custom-title {
+    color: black !important;
+}
+.custom-text {
+    color: gray !important;
+}
+.custom-confirm-button{
+    color: wheat !important;
+}
