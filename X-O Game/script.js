@@ -65,7 +65,7 @@ function winner() {
         if (btn[a].innerHTML !== '' && btn[a].innerHTML === btn[b].innerHTML && btn[b].innerHTML === btn[c].innerHTML){
             someoneWon = true;
             if (btn[a].innerHTML === 'X') {
-                winner_Status.innerHTML = 'X won the game';
+                winner_Status.innerHTML ='X won the game';
             } else {
                 winner_Status.innerHTML = 'O won the game';
             }
